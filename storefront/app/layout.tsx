@@ -1,6 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Lato, Inter } from 'next/font/google'
+import { Cormorant_Garamond, Raleway } from 'next/font/google'
 import { Providers } from './providers'
 import Header from '@/components/layout/header'
 import Footer from '@/components/layout/footer'
@@ -14,26 +14,26 @@ import dynamic from 'next/dynamic'
 
 const CookieConsent = dynamic(() => import('@/components/cookie-consent'))
 
-const heading = Lato({
+const heading = Cormorant_Garamond({
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['300', '400', '500', '600', '700'],
   variable: '--font-heading',
   display: 'swap',
 })
 
-const body = Inter({
+const body = Raleway({
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
+  weight: ['300', '400', '500', '600'],
   variable: '--font-body',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Store — Modern Commerce',
-    template: '%s | Store',
+    default: 'House of Pharos — Luxury Egyptian Fashion',
+    template: '%s | House of Pharos',
   },
-  description: 'Discover curated products crafted with care. A modern ecommerce experience.',
+  description: 'Discover the timeless elegance of ancient Egypt. House of Pharos brings authentic luxury Egyptian fashion to the United Kingdom — fine linens, pharaonic motifs, and bespoke craftsmanship.',
 }
 
 export default function RootLayout({

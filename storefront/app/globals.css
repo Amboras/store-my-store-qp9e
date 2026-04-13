@@ -4,16 +4,16 @@
 
 @layer base {
   :root {
-    --background: 40 20% 98%;
-    --foreground: 0 0% 10%;
-    --muted: 40 10% 94%;
-    --muted-foreground: 0 0% 45%;
-    --accent: 35 40% 50%;
+    --background: 40 30% 97%;       /* Warm ivory parchment */
+    --foreground: 25 15% 12%;       /* Deep ebony */
+    --muted: 40 20% 93%;            /* Soft sand */
+    --muted-foreground: 25 10% 48%; /* Warm stone */
+    --accent: 43 74% 49%;           /* Pharaonic gold */
     --accent-foreground: 0 0% 100%;
-    --border: 40 10% 88%;
-    --ring: 35 40% 50%;
-    --primary: 0 0% 10%;
-    --primary-foreground: 0 0% 98%;
+    --border: 40 20% 86%;           /* Sand border */
+    --ring: 43 74% 49%;             /* Gold ring */
+    --primary: 25 15% 12%;          /* Deep ebony */
+    --primary-foreground: 40 30% 97%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 98%;
 
@@ -23,16 +23,16 @@
   }
 
   .dark {
-    --background: 0 0% 6%;
-    --foreground: 40 20% 94%;
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 55%;
-    --accent: 35 45% 55%;
-    --accent-foreground: 0 0% 100%;
-    --border: 0 0% 16%;
-    --ring: 35 45% 55%;
-    --primary: 40 20% 94%;
-    --primary-foreground: 0 0% 6%;
+    --background: 25 15% 8%;        /* Deep ebony night */
+    --foreground: 40 30% 92%;       /* Warm ivory */
+    --muted: 25 12% 14%;            /* Dark stone */
+    --muted-foreground: 40 15% 58%; /* Warm parchment muted */
+    --accent: 43 74% 52%;           /* Pharaonic gold */
+    --accent-foreground: 25 15% 8%;
+    --border: 25 12% 20%;           /* Dark stone border */
+    --ring: 43 74% 52%;
+    --primary: 40 30% 92%;          /* Warm ivory */
+    --primary-foreground: 25 15% 8%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 98%;
   }
@@ -100,6 +100,31 @@
   .bg-brand-secondary {
     background-color: var(--brand-secondary, hsl(var(--accent)));
   }
+}
+
+/* Gold shimmer animation */
+@keyframes gold-shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    hsl(43, 74%, 49%) 0%,
+    hsl(48, 90%, 65%) 40%,
+    hsl(43, 74%, 49%) 60%,
+    hsl(36, 60%, 38%) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gold-shimmer 4s linear infinite;
+}
+
+.gold-border {
+  border-image: linear-gradient(90deg, hsl(43,74%,49%), hsl(48,90%,65%), hsl(43,74%,49%)) 1;
 }
 
 /* Smooth scrolling */

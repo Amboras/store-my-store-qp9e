@@ -6,7 +6,7 @@ import { usePolicies } from '@/hooks/use-policies'
 
 const footerLinks = {
   shop: [
-    { label: 'All Products', href: '/products' },
+    { label: 'All Pieces', href: '/products' },
     { label: 'New Arrivals', href: '/products?sort=newest' },
     { label: 'Collections', href: '/collections' },
   ],
